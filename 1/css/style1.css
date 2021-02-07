@@ -1,0 +1,139 @@
+/*Фон для секций*/
+	@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.section:first-child {
+  background-image: url(../img/1.png );background-size: cover;
+}
+
+.section:nth-child(2) {
+  background-image: url(../img/2.jpg );background-size: cover;
+}
+
+.section:nth-child(3) {
+  background-image: url(../img/3.jpg );background-size: cover;
+}
+
+.section:nth-child(4) {
+  background-image: url(../img/4.jpg );background-size: cover;
+}
+
+.section:nth-child(5) {
+  background-image: url(../img/5.jpg );background-size: cover;
+}
+
+.section:nth-child(6) {
+  background-image: url(../img/6.jpg );background-size: cover;
+}
+
+.section:nth-child(7) {
+  background-image: url(../img/7.png );background-size: cover;
+}
+
+.section:nth-child(8) {
+  background-image: url(../img/8.jpg );background-size: cover;
+}
+
+.section:nth-child(9) {
+  background-image: url(../img/9.png );background-size: cover;
+}
+
+.section:nth-child(10) {
+  background-image: url(../img/10.jpg);background-size: cover;
+}
+
+.section:nth-child(11) {
+  background-image: url(../img/11.jpg);background-size: cover;
+}
+
+.section:nth-child(12) {
+  background-image: url(../img/12.jpg);background-size: cover;
+}
+
+.section:nth-child(13) {
+  background-image: url(../img/13.gif);background-size: cover;
+}
+
+.section:nth-child(14) {
+  background-image: url(../img/14.png);background-size: cover;
+}
+
+.section:nth-child(15) {
+  background-image: url(../img/15.jpg);background-size: cover;
+}
+
+.section:nth-child(16) {
+  background-image: url(../img/16.png);background-size: cover;
+}
+
+.section:nth-child(17) {
+  background-image: url(../img/17.jpg);background-size: cover;
+}
+
+.section:nth-child(18) {
+  background-image: url(../img/18.jpg);background-size: cover;
+}
+
+.section:nth-child(19) {
+  background-image: url(../img/19.jpg);background-size: cover;
+}
+
+.section:nth-child(20) {
+  background-image: url(../img/20.jpg);background-size: cover;
+}
+
+.section:last-child {
+  background-image: url(../img/20.jpg);background-size: cover;
+}
+
+
+/*Меню*/
+.navbar {
+  min-height: 40px;
+}
+
+.nav > li > a:focus {
+  background: #fff;
+}
+
+#a1{
+	color: #E5FDFF;
+	font-size: 10px;
+}
+
+#a2{
+	color: #FFF;
+	font-size: 40px;
+	text-align:center;
+			font-size:50px;
+			font-family: 'Press Start 2P', cursive;
+			
+			color: #fff;
+			text-shadow: -0   -3px 0   #000000,
+			0   -3px 0   #000000,
+			-0    3px 0   #000000,
+			0    3px 0   #000000,
+			-3px -0   0   #000000,
+			3px -0   0   #000000,
+			-3px  0   0   #000000,
+			3px  0   0   #000000,
+			-3px -3px 0   #000000,
+			3px -3px 0   #000000,
+			-3px  3px 0   #000000,
+			3px  3px 0   #000000,
+			-3px -3px 0   #000000,
+			3px -3px 0   #000000,
+			-3px  3px 0   #000000,
+			3px  3px 0   #000000;
+			
+	
+}
+#back{
+	height:150px;
+	width:200px;
+	position:fixed;
+	top:0px;
+	right:0px;
+	background-image: url(http://cdn.onlinewebfonts.com/svg/download_109927.png);
+background-size: 100% 100%;
+    z-index: 9;
+}

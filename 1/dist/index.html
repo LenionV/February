@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Motoko Lannister</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<center><style>  
+@font-face{font-family:Tiffany;src:url(https://dl.dropbox.com/s/z5ae8b6dzysia09/TiffanyScript.otf);}
+ 
+a:hover {
+    letter-spacing:3px;
+    text-shadow: 2px 1px 5px #000;
+    transition:0.5s;
+}
+  
+/*Scrollbar*/
+::-webkit-scrollbar {width: 4px;}
+::-webkit-scrollbar-track {background:#999;}
+::-webkit-scrollbar-thumb {background: #B8260C;}
+::-webkit-scrollbar-thumb:hover {background: #EFB469;}
+ 
+.background {
+    padding:20px;
+    width:880px;
+}
+ 
+.content {
+    display: none;
+    text-align:justify;
+    font:13px 'Raleway'
+}
+  
+.row {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+ 
+.cover {
+    width:800px; 
+    background:linear-gradient(to bottom, rgb(96, 25, 25), rgb(20, 6, 12)); 
+    box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.5);
+    padding:3px 8px;
+    height:600px;
+    overflow:hidden;
+}
+ 
+.pageleft {
+    width:calc(50% - 30px);
+    height: calc(100% - 20px);
+    margin-left: -31px;
+    box-shadow:inset -15px 0 12px 0 rgba(0,0,0,0.08);
+    border-right:1px solid rgba(0,0,0,0.2); 
+    overflow:hidden;
+    padding:10px
+}
+ 
+.pageright {
+    width:calc(50% - 40px);
+    height: calc(100% - 20px);
+    box-shadow:inset 15px 0 12px 0 rgba(0,0,0,0.08);
+    border-left:1px solid rgba(255,255,255,0.2); 
+    overflow:hidden;
+    padding:10px
+}
+  
+.double {
+    background:url(https://i.imgur.com/ln5sdCw.png);
+    width:900px;
+    height:600px;
+    box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.5);
+    padding:3px 8px;
+}
+ 
+button {
+    cursor: pointer;
+    background: rgba(255,255,255,0);
+    width: 60px;
+    height: 50px;
+    outline: none;
+    border: none;
+}
+ 
+.name {
+    text-align: center; 
+    font:35px 'Tiffany'; 
+    text-shadow: 1px 1px 10px #D73B04; 
+    margin-bottom:20px;
+    color:#7B2713;
+    margin-top:-20px
+}
+ 
+.postcard {
+    height:200px;
+    width:350px;
+    overflow:hidden;
+    border:1px solid;
+    background:#FFF
+}
+ 
+.img {
+    background-size:cover;
+    width:350px;
+    height:200px;
+    transition: all .7s ease-in-out; 
+    -moz-transition: all .7s ease-in-out; 
+    -webkit-transition: all .7s ease-in-out; 
+    ms-transition: all .7s ease-in-out; 
+    -o-transition: all .7s ease-in-out;
+    outline:1px solid #FFF;
+    outline-offset:-10px
+}
+ 
+ .postcard:hover .img {
+    margin-top: -200px; 
+    transition: all .7s ease-in-out; 
+    -moz-transition: all .7s ease-in-out; 
+    -webkit-transition: all .7s ease-in-out; 
+    ms-transition: all .7s ease-in-out; 
+    -o-transition: all .7s ease-in-out;
+}
+ 
+.flexbox {
+    display:flex;
+    flex-flow:row wrap;
+    margin-top:0px;
+    padding:0px;
+    justify-content: space-between;
+    text-align:justify;
+    font: 13px 'Raleway'
+}
+ 
+.text {
+    width:95%;
+    padding:8px;
+    max-height:190px;
+    overflow:auto
+}
+ 
+/* Sidebar design left */
+.left {
+    width:45%;
+    padding:8px;
+    border-right:1px solid 
+}
+ 
+.textleft {
+    max-height:190px;
+    overflow:auto;
+    padding:5px
+}
+ 
+/* Sidebar design right */
+.right {
+    width:45%;
+    padding:8px;
+    border-left:2px solid 
+}
+ 
+.textright {
+    max-height:190px;
+    overflow:auto;
+    padding:5px
+}   
+ 
+.polaroid {
+    width:130px; 
+    height:130px; 
+    box-shadow:3px 3px 10px rgba(0,0,0,0.3);
+    border:10px solid #FFF; 
+    border-bottom:40px solid #FFF;
+    position:relative;
+    transition:0.5s
+}
+ 
+.polaroid > div {
+    opacity:0;
+    transition:0.5s;
+    padding:10px;
+    margin-top:-5px;
+    margin-left:-10px;
+    width:130px;
+    height:150px;
+    overflow:auto
+}
+ 
+.polaroid:hover > div {
+    background-color:#FFF;
+    opacity:1;
+    padding:10px;
+    margin-top:-5px;
+    margin-left:-10px;
+    width:130px;
+    height:150px;
+    text-align:center;
+    overflow:auto;
+    transition:0.5s
+}
+ 
+.img2 {
+    width:150px; 
+    height:120px; 
+    box-shadow:3px 3px 10px rgba(0,0,0,0.3);
+    outline:1px dotted #000; 
+    outline-offset:5px;
+    position:relative;
+    transition:0.5s
+}
+ 
+.img2 > div {
+    opacity:0;
+    padding:10px;
+    margin-top:0px;
+    margin-left:0px;
+    width:135px;
+    height:100px;
+    overflow:auto;
+    transition:0.5s
+}
+ 
+.img2:hover > div {
+    background-color:#FFF;
+    opacity:1;
+    padding:10px;
+    margin-top:0px;
+    margin-left:0px;
+    width:135px;
+    height:100px;
+    text-align:center;
+    overflow:auto;
+    transition:0.5s
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+ 
+    <div class="background">
+        <div class="white">
+        
+        <!--PAGE ONE-->
+            <div class="content" style="display:block" id="1">
+                <div class="row">
+                  <div class="row double">
+                        <div class="pageleft">
+      
+                             <br><br><br>
+                              
+                                    <!--TITLE-->
+      <div class="name">Cool Name</div>
+        <img src="https://i.pinimg.com/originals/37/6d/17/376d177424d2317b37595fa8b0b13f8a.jpg" style="width:80px;margin-left:295px;margin-top:-20px;position:absolute;z-index:1"/><img src="https://i.pinimg.com/originals/9b/44/ef/9b44ef30ec4c953e53e961469f8d7fad.jpg" style="width:80px;margin-left:-25px;margin-top:-20px;position:absolute;z-index:1;transform:rotate(90deg)"/>
+        <div class="postcard">
+        <div class="img" style="background:url('https://i.pinimg.com/236x/d0/6a/d3/d06ad3f4e8f8564ccec124dec5a36439.jpg')center;"></div>
+        <div class="flexbox">
+        <div class="left">
+        <div class="textleft">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br></div>
+        </div>
+        
+        <div class="right">
+        <div class="textright">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br></div>
+        </div>
+        </div>
+        </div>
+                        
+                        <img src="https://i.pinimg.com/originals/b9/dd/6b/b9dd6bbf897ddb152c26f42e6b5026ef.jpg" style="width:80px;margin-left:115px;margin-top:120px;position:absolute;z-index:1;transform:rotate(90deg)"/><img src="https://thumbs.gfycat.com/AssuredCrispArrowana-size_restricted.gif" style="width:80px;margin-left:255px;margin-top:-5px;position:absolute;z-index:1;transform:rotate(-38deg)"/>
+                    <div style="background:#ddd url(https://i.pinimg.com/originals/89/c7/56/89c75661f8ca7878c3d13d5c3d0bb7a3.gif)center; background-size:cover; width:130px; height:130px;box-shadow:3px 3px 10px rgba(0,0,0,0.3); border:10px solid #FFF; border-bottom:40px solid #FFF; transform:rotate(-7deg); position:relative;margin-left:10px;float:left"></div>    
+                    <div style="background:#ddd url(https://www.imago-images.de/bild/st/0105907428/s.jpg)center; background-size:cover; width:130px; height:130px; box-shadow:3px 3px 10px rgba(0,0,0,0.3); border:10px solid #FFF; border-bottom:40px solid #FFF; transform:rotate(5deg); position:relative;margin-right:10px;margin-top:30px;float:right"></div> 
+                            </div>
+ 
+                        <div class="pageright">
+ 
+                            
+                                    <img src="https://img.wattpad.com/9fbf149c2d8c9bc936c52bc36865159b25de95b4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f3330646b42644f376230677168673d3d2d3436303833343338332e313464653132323731343562383235373231313632393335353733312e6a7067?s=fit&w=720&h=720" style="width:80px;margin-left:155px;margin-top:-25px;position:absolute;z-index:1;transform:rotate(-43deg)"/><img src="https://data.whicdn.com/images/294083211/original.gif" style="width:80px;margin-left:155px;margin-top:175px;position:absolute;z-index:1;transform:rotate(-43deg)"/>
+        <div class="postcard" style="margin-left:20px;margin-top:10px">
+        <div class="img" style="background:url('https://images05.netdoktor.at/iStock_000024182649Small.jpg/bigthumb/9145/8513589')center;"></div>
+        <div class="flexbox">
+        <div class="text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br><br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        </div>
+        </div> <br><br>
+                           <img src="https://i.pinimg.com/originals/c6/83/31/c683316b396873342ec70efbeac6b451.gif" style="width:80px;margin-left:335px;margin-top:150px;position:absolute;z-index:1;transform:rotate(47deg)"/><img src="https://media.tenor.com/images/f46d550239214933a58c40ce4250008a/tenor.gif" style="width:80px;margin-left:-20px;margin-top:0px;position:absolute;z-index:1;transform:rotate(47deg)"/>
+        <div class="postcard" style="margin-left:20px;margin-top:10px">
+        <div class="img" style="background:url('https://i.pinimg.com/originals/9c/02/b2/9c02b277f0c3f0e12b2efdb3cca3aa24.gif')center;"></div>
+        <div class="flexbox">
+        <div class="left">
+        <div class="textleft">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br></div>
+        </div>
+        
+        <div class="right">
+        <div class="textright">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br></div>
+        </div>
+        </div>
+        </div> 
+                        <p style="font:12px 'Anonymous Pro';text-align:center;margin-top:20px">A little quote, sentence here.</p>        
+                          </div>
+                    </div>
+                    <button onclick="openCity(event, '2')"><img src="https://cdn.onlinewebfonts.com/svg/img_439279.png"/ style="width: 40px;"></button>
+                </div>
+            </div> <!-- END -->     
+ 
+        <!--PAGE TWO-->
+            <div class="content" id="2">
+                <div class="row">
+                    <button style="transform:rotate(180deg)" onclick="openCity(event, '1')"><img src="https://cdn.onlinewebfonts.com/svg/img_439279.png"/ style="width: 40px;"></button>
+ 
+                    <div class="row double">
+                        <div class="pageleft">
+ 
+                   <img src="https://thypix.com/wp-content/uploads/2020/09/love-drawing-77-700x569.jpg" style="width:100px;transform:rotate(-15deg);margin-left:50px" />   <img src="https://www.marklambert.de/wp-content/uploads/2018/08/wie-erkenne-ich-wahre-liebe.jpg" style="width:150px;transform:rotate(0deg);margin-right:-30px" /> 
+ 
+<div class="polaroid" style="background:#ddd url(https://lh3.googleusercontent.com/proxy/Wf4_aQs3LBnxMX21oToqOr5HAQNH7dyXIjbzGFRQq6hjVCnGXduDNgmSXbmfDWdG4Ujztb1uNK13L9QC8sIWKQ-ifDON34XrKNz9LVKE-8mFKrV5-hqfCFxdYgFb62uY-ToNx4y628RRG9PQuZIGkg)center; background-size:cover;transform:rotate(5deg);margin-left:15px;float:left"><div> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div></div> 
+                    
+                    <div class="img2" style="background:#ddd url(https://lh3.googleusercontent.com/proxy/3oHCYpw_A3gxxSlhMFsls_mR2GSZ2GsjqDZuXhG0mAVBAOJeoMpgbrpr7X9lvOdyeY1L2geR2i5ZyiCTD0hxMrbqfXDRHFoR3T-CmGwQ-hqM)center; background-size:cover;margin-top:80px;margin-right:10px;float:right"><div> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div></div> 
+ 
+                         <div style="margin-top:220px;height:200px;overflow:auto"><p style="font:12px 'Anonymous Pro';text-align:center;">A little quote, sentence here. A description, idk what.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> </div>
+                    </div>
+                    
+                        <div class="pageright">
+                        <center>
+<div class="img" style="background:url('https://64.media.tumblr.com/457b4fe80417c591c72814de3a0194e7/tumblr_p3br6vonU81ttv3q4o7_540.gifv')center;margin-top:10px;border:1px solid"></div>
+                        <img src="https://img.pngio.com/heart-heartcrown-crown-cute-blue-darkblue-cute-blue-png-700_350.png" style="width:100px;transform:rotate(-5deg);margin-top:0px" />
+                        <img src="https://img2.pngio.com/aries-constellation-sticker-by-dansam-aries-constellation-aries-constellation-png-2048_2048.png" style="width:100px;margin-top:-20px" />
+                        
+                        </center>
+                        <div class="img2" style="margin-left:90px;background:url('https://66.media.tumblr.com/b00ecfbe37e15a40f655be68a068c967/tumblr_p429mkLIru1u5kd84o2_400.gifv')right"></div>
+                        <img src="https://i.pinimg.com/originals/b5/16/79/b51679ca163e76ddcc6e42a9cbfae21b.png" style="width:100px;transform:rotate(20deg);margin-top:-50px;float:right" />
+                        <p style="font:12px 'Anonymous Pro';text-align:center;margin-top:20px">A little quote, sentence here.</p>  
+                        </div>
+                    </div>
+                    <button onclick="openCity(event, '3')"><img src="https://cdn.onlinewebfonts.com/svg/img_439279.png"/ style="width: 40px;"></button>
+                </div>
+            </div> <!--END-->        
+          
+<!--PAGE THREE-->          
+            <div class="content" id="3">
+                <div class="row">
+                   
+                    <button style="transform:rotate(180deg)" onclick="openCity(event, '2')"><img src="https://cdn.onlinewebfonts.com/svg/img_439279.png"/ style="width: 40px;"></button>
+ 
+                    <div class="row double">
+                        <div class="pageleft">
+                          Blurb
+                        </div>
+                        <div class="pageright">
+                        Blurb
+                        </div>
+                    </div> <!-- END-->
+                    
+                </div>
+            </div>            
+          
+          
+        </div>
+ 
+    </div>
+ 
+<a href="https://audreyscodes.tumblr.com" style="text-decoration:none;color:#000;transition:0.5s"><div style="display:block;font-size:9px;color:#000;text-transform:uppercase;text-decoration:none;font-family:arial;text-align:center;padding:5px;">© By Audrey's Codes</div></a>
+<br><br>
+<script>
+    function openCity(evt, contPage) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(contPage).style.display = "block";
+        evt.currentTarget.className += " active";
+    } {}
+</script>
+  </center>
+<!-- partial -->
+  
+</body>
+</html>

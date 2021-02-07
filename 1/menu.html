@@ -1,0 +1,559 @@
+﻿<html>
+	<head>			<link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+		<link rel="stylesheet" href="css/q1.css" type="text/css" />
+		
+		<script src="js/main.js"></script>
+		<script>
+			/*let timerId = setTimeout(function tick() {
+			alert('tick');
+			timerId = setTimeout(tick, 2000); // (*)
+			}, 2000);*/
+			
+			let timerId = setTimeout(function tick() 
+			{
+			//alert('tick');
+			timerId = setInterval("sky();", 5000); // (*)
+			}, 2000);
+			
+			
+			function sky(){
+			let now = new Date();//дата
+			//alert( now.getHours() );//вывод
+			var time =now.getHours();
+			
+			//alert(time);
+			//time=23;
+			switch(time) {
+						case 0:  
+			document.getElementById("0").style.display = "block";
+			
+			break;			
+			
+			case 1:  // if (x === 'value1')
+			document.getElementById("0").style.display = "block";
+			document.getElementById("1").style.display = "block";
+			break;
+			
+			case 2:  
+			document.getElementById("0").style.display = "block";
+			document.getElementById("1").style.display = "block";
+			document.getElementById("2").style.display = "block";
+			break; 
+			
+			case 3:  
+			document.getElementById("0").style.display = "block";
+			document.getElementById("1").style.display = "block";
+			document.getElementById("2").style.display = "block";
+			document.getElementById("3").style.display = "block";
+			break;
+			
+			case 4:  
+			document.getElementById("0").style.display = "block";
+			document.getElementById("1").style.display = "block";
+			document.getElementById("2").style.display = "block";
+			document.getElementById("3").style.display = "block";
+			document.getElementById("4").style.display = "block";
+			break;
+			
+			case 5:  
+			document.getElementById("0").style.display = "block";
+			document.getElementById("1").style.display = "block";
+			document.getElementById("2").style.display = "block";
+			document.getElementById("3").style.display = "block";
+			document.getElementById("4").style.display = "block";
+			document.getElementById("5").style.display = "block";
+			break;
+			
+			case 6:  
+			document.getElementById("0").style.display = "block";
+			document.getElementById("1").style.display = "block";
+			document.getElementById("2").style.display = "block";
+			document.getElementById("3").style.display = "block";
+			document.getElementById("4").style.display = "block";
+			document.getElementById("5").style.display = "block";
+			document.getElementById("6").style.display = "block";
+			break;
+			
+			case 7:  
+			document.getElementById("0").style.display = "block";
+			document.getElementById("1").style.display = "block";
+			document.getElementById("2").style.display = "block";
+			document.getElementById("3").style.display = "block";
+			document.getElementById("4").style.display = "block";
+			document.getElementById("5").style.display = "block";
+			document.getElementById("6").style.display = "block";
+			document.getElementById("7").style.display = "block";
+			break;
+			
+			case 8:  
+			document.getElementById("0").style.display = "block";
+			document.getElementById("1").style.display = "block";
+			document.getElementById("2").style.display = "block";
+			document.getElementById("3").style.display = "block";
+			document.getElementById("4").style.display = "block";
+			document.getElementById("5").style.display = "block";
+			document.getElementById("6").style.display = "block";
+			document.getElementById("7").style.display = "block";
+			document.getElementById("8").style.display = "block";
+			break;
+			
+			case 9:  
+			document.getElementById("0").style.display = "block";
+			document.getElementById("1").style.display = "block";
+			document.getElementById("2").style.display = "block";
+			document.getElementById("3").style.display = "block";
+			document.getElementById("4").style.display = "block";
+			document.getElementById("5").style.display = "block";
+			document.getElementById("6").style.display = "block";
+			document.getElementById("7").style.display = "block";
+			document.getElementById("8").style.display = "block";
+			document.getElementById("9").style.display = "block";
+			break;
+			
+			case 10:  
+			document.getElementById("0").style.display = "block";
+			document.getElementById("1").style.display = "block";
+			document.getElementById("2").style.display = "block";
+			document.getElementById("3").style.display = "block";
+			document.getElementById("4").style.display = "block";
+			document.getElementById("5").style.display = "block";
+			document.getElementById("6").style.display = "block";
+			document.getElementById("7").style.display = "block";
+			document.getElementById("8").style.display = "block";
+			document.getElementById("9").style.display = "block";
+			document.getElementById("10").style.display = "block";
+			break;
+			
+			case 11:  
+			document.getElementById("0").style.display = "block";
+			document.getElementById("1").style.display = "block";
+			document.getElementById("2").style.display = "block";
+			document.getElementById("3").style.display = "block";
+			document.getElementById("4").style.display = "block";
+			document.getElementById("5").style.display = "block";
+			document.getElementById("6").style.display = "block";
+			document.getElementById("7").style.display = "block";
+			document.getElementById("8").style.display = "block";
+			document.getElementById("9").style.display = "block";
+			document.getElementById("10").style.display = "block";
+			document.getElementById("11").style.display = "block";
+			break;
+			
+			case 12:  
+			document.getElementById("0").style.display = "block";
+			document.getElementById("1").style.display = "block";
+			document.getElementById("2").style.display = "block";
+			document.getElementById("3").style.display = "block";
+			document.getElementById("4").style.display = "block";
+			document.getElementById("5").style.display = "block";
+			document.getElementById("6").style.display = "block";
+			document.getElementById("7").style.display = "block";
+			document.getElementById("8").style.display = "block";
+			document.getElementById("9").style.display = "block";
+			document.getElementById("10").style.display = "block";
+			document.getElementById("11").style.display = "block";
+			document.getElementById("12").style.display = "block";
+			break;
+			
+			case 13:  
+			document.getElementById("0").style.display = "block";
+			document.getElementById("1").style.display = "block";
+			document.getElementById("2").style.display = "block";
+			document.getElementById("3").style.display = "block";
+			document.getElementById("4").style.display = "block";
+			document.getElementById("5").style.display = "block";
+			document.getElementById("6").style.display = "block";
+			document.getElementById("7").style.display = "block";
+			document.getElementById("8").style.display = "block";
+			document.getElementById("9").style.display = "block";
+			document.getElementById("10").style.display = "block";
+			document.getElementById("11").style.display = "block";
+			document.getElementById("12").style.display = "block";
+			document.getElementById("13").style.display = "block";
+			break;
+			
+			case 14:  
+			document.getElementById("0").style.display = "block";
+			document.getElementById("1").style.display = "block";
+			document.getElementById("2").style.display = "block";
+			document.getElementById("3").style.display = "block";
+			document.getElementById("4").style.display = "block";
+			document.getElementById("5").style.display = "block";
+			document.getElementById("6").style.display = "block";
+			document.getElementById("7").style.display = "block";
+			document.getElementById("8").style.display = "block";
+			document.getElementById("9").style.display = "block";
+			document.getElementById("10").style.display = "block";
+			document.getElementById("11").style.display = "block";
+			document.getElementById("12").style.display = "block";
+			document.getElementById("13").style.display = "block";
+			document.getElementById("14").style.display = "block";
+			break;
+			
+			case 15:  
+			document.getElementById("0").style.display = "block";
+			document.getElementById("1").style.display = "block";
+			document.getElementById("2").style.display = "block";
+			document.getElementById("3").style.display = "block";
+			document.getElementById("4").style.display = "block";
+			document.getElementById("5").style.display = "block";
+			document.getElementById("6").style.display = "block";
+			document.getElementById("7").style.display = "block";
+			document.getElementById("8").style.display = "block";
+			document.getElementById("9").style.display = "block";
+			document.getElementById("10").style.display = "block";
+			document.getElementById("11").style.display = "block";
+			document.getElementById("12").style.display = "block";
+			document.getElementById("13").style.display = "block";
+			document.getElementById("14").style.display = "block";
+			document.getElementById("15").style.display = "block";
+			break;
+			
+			case 16:  
+			document.getElementById("0").style.display = "block";
+			document.getElementById("1").style.display = "block";
+			document.getElementById("2").style.display = "block";
+			document.getElementById("3").style.display = "block";
+			document.getElementById("4").style.display = "block";
+			document.getElementById("5").style.display = "block";
+			document.getElementById("6").style.display = "block";
+			document.getElementById("7").style.display = "block";
+			document.getElementById("8").style.display = "block";
+			document.getElementById("9").style.display = "block";
+			document.getElementById("10").style.display = "block";
+			document.getElementById("11").style.display = "block";
+			document.getElementById("12").style.display = "block";
+			document.getElementById("13").style.display = "block";
+			document.getElementById("14").style.display = "block";
+			document.getElementById("15").style.display = "block";
+			document.getElementById("16").style.display = "block";
+			break;
+			
+			case 17:  
+			document.getElementById("0").style.display = "block";
+			document.getElementById("1").style.display = "block";
+			document.getElementById("2").style.display = "block";
+			document.getElementById("3").style.display = "block";
+			document.getElementById("4").style.display = "block";
+			document.getElementById("5").style.display = "block";
+			document.getElementById("6").style.display = "block";
+			document.getElementById("7").style.display = "block";
+			document.getElementById("8").style.display = "block";
+			document.getElementById("9").style.display = "block";
+			document.getElementById("10").style.display = "block";
+			document.getElementById("11").style.display = "block";
+			document.getElementById("12").style.display = "block";
+			document.getElementById("13").style.display = "block";
+			document.getElementById("14").style.display = "block";
+			document.getElementById("15").style.display = "block";
+			document.getElementById("16").style.display = "block";
+			document.getElementById("17").style.display = "block";
+			break;				
+			
+			case 18:  
+			document.getElementById("0").style.display = "block";
+			document.getElementById("1").style.display = "block";
+			document.getElementById("2").style.display = "block";
+			document.getElementById("3").style.display = "block";
+			document.getElementById("4").style.display = "block";
+			document.getElementById("5").style.display = "block";
+			document.getElementById("6").style.display = "block";
+			document.getElementById("7").style.display = "block";
+			document.getElementById("8").style.display = "block";
+			document.getElementById("9").style.display = "block";
+			document.getElementById("10").style.display = "block";
+			document.getElementById("11").style.display = "block";
+			document.getElementById("12").style.display = "block";
+			document.getElementById("13").style.display = "block";
+			document.getElementById("14").style.display = "block";
+			document.getElementById("15").style.display = "block";
+			document.getElementById("16").style.display = "block";
+			document.getElementById("17").style.display = "block";
+			document.getElementById("18").style.display = "block";
+			break;
+			
+			case 19:  
+			document.getElementById("0").style.display = "block";
+			document.getElementById("1").style.display = "block";
+			document.getElementById("2").style.display = "block";
+			document.getElementById("3").style.display = "block";
+			document.getElementById("4").style.display = "block";
+			document.getElementById("5").style.display = "block";
+			document.getElementById("6").style.display = "block";
+			document.getElementById("7").style.display = "block";
+			document.getElementById("8").style.display = "block";
+			document.getElementById("9").style.display = "block";
+			document.getElementById("10").style.display = "block";
+			document.getElementById("11").style.display = "block";
+			document.getElementById("12").style.display = "block";
+			document.getElementById("13").style.display = "block";
+			document.getElementById("14").style.display = "block";
+			document.getElementById("15").style.display = "block";
+			document.getElementById("16").style.display = "block";
+			document.getElementById("17").style.display = "block";
+			document.getElementById("18").style.display = "block";
+			document.getElementById("19").style.display = "block";
+			break;
+			
+			case 20:  
+			document.getElementById("0").style.display = "block";
+			document.getElementById("1").style.display = "block";
+			document.getElementById("2").style.display = "block";
+			document.getElementById("3").style.display = "block";
+			document.getElementById("4").style.display = "block";
+			document.getElementById("5").style.display = "block";
+			document.getElementById("6").style.display = "block";
+			document.getElementById("7").style.display = "block";
+			document.getElementById("8").style.display = "block";
+			document.getElementById("9").style.display = "block";
+			document.getElementById("10").style.display = "block";
+			document.getElementById("11").style.display = "block";
+			document.getElementById("12").style.display = "block";
+			document.getElementById("13").style.display = "block";
+			document.getElementById("14").style.display = "block";
+			document.getElementById("15").style.display = "block";
+			document.getElementById("16").style.display = "block";
+			document.getElementById("17").style.display = "block";
+			document.getElementById("18").style.display = "block";
+			document.getElementById("19").style.display = "block";
+			document.getElementById("20").style.display = "block";
+			break;
+			
+			case 21:  
+			document.getElementById("0").style.display = "block";
+			document.getElementById("1").style.display = "block";
+			document.getElementById("2").style.display = "block";
+			document.getElementById("3").style.display = "block";
+			document.getElementById("4").style.display = "block";
+			document.getElementById("5").style.display = "block";
+			document.getElementById("6").style.display = "block";
+			document.getElementById("7").style.display = "block";
+			document.getElementById("8").style.display = "block";
+			document.getElementById("9").style.display = "block";
+			document.getElementById("10").style.display = "block";
+			document.getElementById("11").style.display = "block";
+			document.getElementById("12").style.display = "block";
+			document.getElementById("13").style.display = "block";
+			document.getElementById("14").style.display = "block";
+			document.getElementById("15").style.display = "block";
+			document.getElementById("16").style.display = "block";
+			document.getElementById("17").style.display = "block";
+			document.getElementById("18").style.display = "block";
+			document.getElementById("19").style.display = "block";
+			document.getElementById("20").style.display = "block";
+			document.getElementById("21").style.display = "block";
+			break;
+			
+			case 22:  
+			document.getElementById("0").style.display = "block";
+			document.getElementById("1").style.display = "block";
+			document.getElementById("2").style.display = "block";
+			document.getElementById("3").style.display = "block";
+			document.getElementById("4").style.display = "block";
+			document.getElementById("5").style.display = "block";
+			document.getElementById("6").style.display = "block";
+			document.getElementById("7").style.display = "block";
+			document.getElementById("8").style.display = "block";
+			document.getElementById("9").style.display = "block";
+			document.getElementById("10").style.display = "block";
+			document.getElementById("11").style.display = "block";
+			document.getElementById("12").style.display = "block";
+			document.getElementById("13").style.display = "block";
+			document.getElementById("14").style.display = "block";
+			document.getElementById("15").style.display = "block";
+			document.getElementById("16").style.display = "block";
+			document.getElementById("17").style.display = "block";
+			document.getElementById("18").style.display = "block";
+			document.getElementById("19").style.display = "block";
+			document.getElementById("20").style.display = "block";
+			document.getElementById("21").style.display = "block";
+			document.getElementById("22").style.display = "block";
+			break;
+			
+			case 23:  
+			document.getElementById("0").style.display = "block";
+			document.getElementById("1").style.display = "block";
+			document.getElementById("2").style.display = "block";
+			document.getElementById("3").style.display = "block";
+			document.getElementById("4").style.display = "block";
+			document.getElementById("5").style.display = "block";
+			document.getElementById("6").style.display = "block";
+			document.getElementById("7").style.display = "block";
+			document.getElementById("8").style.display = "block";
+			document.getElementById("9").style.display = "block";
+			document.getElementById("10").style.display = "block";
+			document.getElementById("11").style.display = "block";
+			document.getElementById("12").style.display = "block";
+			document.getElementById("13").style.display = "block";
+			document.getElementById("14").style.display = "block";
+			document.getElementById("15").style.display = "block";
+			document.getElementById("16").style.display = "block";
+			document.getElementById("17").style.display = "block";
+			document.getElementById("18").style.display = "block";
+			document.getElementById("19").style.display = "block";
+			document.getElementById("20").style.display = "block";
+			document.getElementById("21").style.display = "block";
+			document.getElementById("22").style.display = "block";
+			document.getElementById("23").style.display = "block";
+			
+			break;		
+			
+			default:
+			break;
+		}
+		//background-position-y: -150px;
+	}
+</script>
+
+</head>	
+<body id="doc" onload="sky();">
+			<img src="./img/fon.gif" class="background"  />
+
+	
+	<div id="0">
+	00:00<br>
+	Ну привет морковка, давно не делал бота и решил добавить шарма и красоты))) <br>
+Как ни как сегодня не простой день)... 
+<hr></div>
+	<div id="1">
+	01:00<br>
+	 И ты скорее всего сейчас спишь, а тот я тогда год назад не спал)......<br>А мемы кидал :D
+	 <br><br>
+<img width="900" height="900" src="./img/111.jpg">
+<img width="900" height="900" src="./img/222.jpg">
+<img width="900" height="900" src="./img/333.jpg">
+<img width="900" height="900" src="./img/444.jpg">
+<img width="900" height="900" src="./img/555.jpg">
+<img width="900" height="900" src="./img/666.jpg">
+<img width="900" height="900" src="./img/777.jpg">
+<img width="900" height="900" src="./img/888.jpg">
+<img width="900" height="900" src="./img/999.jpg">
+<img width="900" height="900" src="./img/000.jpg">
+<img width="900" height="900" src="./img/qqq.jpg">
+<img width="900" height="900" src="./img/www.jpg">
+
+<hr></div>
+	<div id="2">
+	02:00<br>
+	Раньше я мог не спать часами после 12... И страдал какой то фигней, просто играя или скучая в ютубе... Но....
+	<hr></div>
+	<div id="3">
+	03:00<br>
+	Но)... Появилась ти, одно сообщение, одно "Привет"... Стало катализатором ко всему что было и будет, А будет очень много всего))))
+<hr></div>
+	<div id="4">
+	04:00<br>
+	(ღ˘⌣˘ღ)<br>
+<img width="700" height="700" src="./img/photo_2021-02-06_21-16-38.jpg">
+<hr></div>
+	<div id="5">
+	05:00<br>
+	Вот честно не знаю когда ты там встанешь, в 5 или 6....<br>
+	Поэтому поступлю наверное наиболее просто)... Кину это сейчас)...<br><br>
+	<a href="../karysel/qwe.html" style="color: pink; text-decoration:none;">Сюрприз</a>
+
+<hr></div>
+	<div id="6">
+	06:00<br>
+	А в шесть позвоню, и узнаю как утречко, и разбужу))<br>
+	Да и узнаю как тебе то что было в пять)))
+<hr></div>
+	<div id="7">
+	07:00<br>
+	И Нинаю что сейчас мы оба делаем, и о чем мы говорим)... Но тогда первое что было мной прочитано...<br>
+	Не, не доброе утро, или что-то подобное)...<br>
+	У нас все на нашему)))<br>
+	Поэтому ти написала "Вот ты злюка" :З
+	<hr></div>
+	<div id="8">
+	08:00<br>
+	Но вот интересно... Представляла ли ты что будет тогда в будущем?)....<br>
+	То что будет через месяц.. 3 месяца... Год?))
+<img width="500" height="500" src="./img/w2.jpg">
+<img width="500" height="500" src="./img/w3.jpg">
+<img width="500" height="500" src="./img/w4.jpg">
+<img width="500" height="500" src="./img/w5.jpg">
+<hr></div>
+	<div id="9">
+	09:00<br>
+	Через бесконечность?)))<br>
+	Все же у нас все впереди)))))<br>
+	Все взлеты и падения, счастье и горе.. Будет все, и мы все переживем)...
+<hr></div>
+	<div id="10">
+	10:00<br>
+	Но честно говоря... Скорее всего мы будем просто спать и обниматься 24/7 <br>
+	И это будут самые лучшие моменты).. Которые мы все так ждем)..
+<hr></div>
+	<div id="11">
+	11:00<br>
+	11..... Перемена... в 45 минут у вас)... Вроде...<br>
+	В общем постараюсь позвонить)........  
+<hr></div>
+	<div id="12">
+	12:00<br>
+	Чтож не знаю разговариваем ли мы сейчас, но более чем уверен что мы проводим время вместе)..<br>
+	Хоть и в вк.. или в тг.. в общем где то)
+<hr></div>
+	<div id="13">
+	13:00<br>
+	И да... держу в курсе, у меня текущего... всм прошлого... ну ты поняла)... того меня что сейчас пишет)..<br>
+	В общем сейчас 7 число и).. У меня кончились идеи...
+	<hr></div>
+	<div id="14">
+	14:00<br>
+Чтож.... Ты любишь хлеб?... Да? Нет?.. Не важно, 50% мема тебе понравится)..<br>
+
+<img width="600" height="600" src="./img/w11.jpg">
+<img width="600" height="600" src="./img/w22.jpeg">
+<img width="600" height="600" src="./img/w33.jpg">
+	<hr></div>
+	<div id="15">
+	15:00<br>
+	А если серьезно, мне проще делать реальный подарок, чем кодить)...<br> И я наверно так и сделаю на 14, тк на 8 я просто не успел)...
+<hr></div>
+	<div id="16">
+	16:00<br>
+	Да и я вроде уже спалил то хотел подарить<br> Но думаю ты сможешь вспомнить)...<br> 
+	<img width="600" height="600" src="./img/345.jpg">
+	<hr></div>
+	<div id="17">
+	17:00<br>
+	И видимо последнее на сегодня)....<br>
+<hr></div>
+	<div id="18">
+	18:00<br>
+		Что ти читаешь?)...
+<hr></div>
+	<div id="19">
+	19:00<br>
+	
+Правда, все)... Я реально не знаю что писать)..<br>Так что общайся с тем самым мной)...
+<hr></div>
+	<div id="20">
+	20:00<br>
+	Ну лаадно, может есть кое что еще).... <br>
+		<a href="./WOY.html" style="color: pink; text-decoration:none;">Сюрприз 2x</a><br>
+		Но Это не совсем то:D
+<hr></div>
+	<div id="21">
+	21:00<br>
+	Я просто не успел все приготовить, и это я впихну в телеграмм, под самый конец
+<hr></div>
+	<div id="22">
+	22:00<br>
+	В том случае если я балбес из прошлого сделаю это и не подставлю себя из будущего
+<hr></div>
+	<div id="23">
+	23:00<br>
+	И.... Офицально... первый день нашего второго года... прошел :3<br>Люблю тебя морковка)))))
+<br><br>
+
+	</div>
+
+	
+	
+	
+</body>
+</html>
