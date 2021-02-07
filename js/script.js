@@ -24,16 +24,16 @@ function text_out(){
 	{
 		document.getElementById("text_change").style.color = "red";
 	}
-	if (aaa!=1)
-	if (Day==praz2)
-	{
-		document.getElementById("text_change").style.color = "pink";
+	// if (aaa!=1)
+	// if (Day==praz2)
+	// {
+		// document.getElementById("text_change").style.color = "pink";
 		
-	}
-	else 
-	{
-		document.getElementById("text_change").style.color = "red";
-	}
+	// }
+	// else 
+	// {
+		// document.getElementById("text_change").style.color = "red";
+	// }
 	
 	
 }
